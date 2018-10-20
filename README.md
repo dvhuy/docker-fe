@@ -5,6 +5,9 @@ Boilerplate for setting up development environment for Front End.
 
 ### How do I get set up?
 
+Easy to install from npm with:
+``npm i docker-fe``
+
 > Remember install & docker first.
 > Let grant permissions to all directories that will execute *.sh* files such as: `./bin/*.sh`, `./bootstrap` file and in _entrypoints_ dir, using `sudo` (if need).
 Ex:
