@@ -1,0 +1,14 @@
+version: '2'
+services:
+  api:
+    extends:
+      file: ../../docker-compose.common.yml
+      service: api
+  webapp:
+    extends:
+      file: ../../docker-compose.common.yml
+      service: webapp
+  mongodb:
+    extends:
+      file: ../../docker-compose.common.yml
+      service: mongodb

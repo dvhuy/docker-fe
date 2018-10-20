@@ -1,0 +1,40 @@
+version: '2'
+services:
+  webapp:
+    image: dockerfe/webapp:latest
+    build:
+      context: .
+      dockerfile: ./Dockerfiles/webapp.Dockerfile
+    volumes:
+      - ./entrypoints/commons/start.sh:/usr/local/bin/start.sh
+      - ./entrypoints/commons/run-test.sh:/usr/local/bin/run-test.sh
+      - ../sources/webapp:/working
+    entrypoint: start.sh
+    environment:
+      - HOST=0.0.0.0
+      - NODE_ENV=development
+      - PORT=4000
+    ports:
+      - 4000:4000
+  api:
+    image: dockerfe/api:latest
+    build:
+      context: .
+      dockerfile: ./Dockerfiles/api.Dockerfile
+    volumes:
+      - ./entrypoints/commons/start.sh:/usr/local/bin/start.sh
+      - ./entrypoints/commons/run-test.sh:/usr/local/bin/run-test.sh
+      - ../sources/api:/working
+    entrypoint: start.sh
+    environment:
+      - HOST=0.0.0.0
+      - NODE_ENV=development
+      - PORT=8080
+    ports:
+      - 8080:8080
+  mongodb:
+    image: mongo
+    volumes:
+      - ../sources/db/mongo:/data/db
+    ports:
+      - 27017:27017

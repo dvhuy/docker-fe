@@ -1,0 +1,28 @@
+{
+  "name": "docker-fe",
+  "version": "1.0.0",
+  "description": "Setting up environment for Front End development using docker, docker-compose, shell-script, nodejs ...",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dvhuy/docker-fe.git"
+  },
+  "keywords": [
+    "docker",
+    "docker-fe",
+    "docker-compose",
+    "frontend",
+    "frontend",
+    "environment",
+    "nodejs"
+  ],
+  "author": "HuyDoan <vanhuy.doan@gmail.com> (www.duykoy.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dvhuy/docker-fe/issues"
+  },
+  "homepage": "https://github.com/dvhuy/docker-fe#readme"
+}

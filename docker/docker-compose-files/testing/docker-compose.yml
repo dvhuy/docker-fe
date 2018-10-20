@@ -1,0 +1,16 @@
+version: '2'
+services:
+  webapp:
+    extends:
+      file: ../../docker-compose.common.yml
+      service: webapp
+    volumes:
+      - ../../../sources/testing:/working/server
+    entrypoint: run-test.sh
+    environment:
+      - HOST=0.0.0.0
+      - NODE_ENV=development
+      - PORT=2018
+      - PROJECT_APP=webapp
+    ports:
+      - 2018:2018
